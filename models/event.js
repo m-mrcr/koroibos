@@ -5,7 +5,8 @@ module.exports = (sequelize, DataTypes) => {
     sport: DataTypes.STRING
   }, {});
   Event.associate = function(models) {
-    Event.belongsToMany(models.Olympian, {through: 'OlympianEvents', as: 'events', foreignKey: 'EventId'});
+    Event.hasMany(models.OlympianEvent)
+    Event.belongsToMany(models.Olympian, {through: models.OlympianEvent, foreignKey: models.EventId});
   };
-  return Event;
+return Event;
 };
