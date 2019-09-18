@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- node
+services:
+- postgresql
+before_script:
+- psql -c 'create database om_nom_edamam_test;' -U postgres
+deploy:
+  provider: heroku
+  api_key:
+    secure: DWHBd2Dnl12co+xw90UUTwD7KVJkFz5V1rUrB8SXXJMrERMieuw8OTGblHQpOJyQg6uqf65W9R3XcEQIDlID44Fvoj76iiYLAoaQCAJCzqb18fklvndh/JbVie0AHxQXKE7BTVIU/nN013QgH/B+bFohG3zvFQoITYmuwHWjMnCqIKIYyszxgBm1Yc2xt8pCXLxsvC3iSTyi81O5mvTulIbytN2DbWnKkRmZu5EKk8JTzcifGaki7v9q2rHrpg2pmcsN+5MoAwqJXZCrPLk4eHTYhyy/qwJhy9dgSJm3KuWslE/X7ysqDUD3CWsLs/r9o2juP+kku53TohI3oTauH8brjHNUykpAIE2cXFrptEUcSao2R0RqRlqOwRkMSvdwCuoCb2BdPh3lqFuHkzivjZ5D5pAkxM42g2iPIYIPfm6iWsErIhUgoI2sM9YFkiOlmQXtwjwXaj5yXnPlqAE6ITyzEjMd3+x5i6U7cl0mmtibqAVjAnbNxnouNPOQQcXgFN8nSlbtMjJ26hoj5BAdtTbinZN2zWP+fDE7pkalVo0qaXV+bGpsiSjg7rovJ/qcL1m1F2lYmv6mWxGqWNvxcxZgNvMWCjaEeH58GUNzHVwlcRSL83G8jbzXrQo/58oOr2XNMeFxMzYl9uJdzC5oEXgKi5Vysp8ry5xQRrJaGLw=
+  app: koroibos-m
+  on:
+    repo: m-mrcr/koroibos
