@@ -6,7 +6,7 @@ module.exports = {
       id: 1,
       medal: "Gold",
       EventId: 1,
-      OlympianId: 1,
+      OlympianId: 2,
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -14,7 +14,7 @@ module.exports = {
       id: 2,
       medal: "Silver",
       EventId: 1,
-      OlympianId: 2,
+      OlympianId: 1,
       createdAt: new Date(),
       updatedAt: new Date()
     },
