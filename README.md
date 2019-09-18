@@ -228,7 +228,7 @@ Link: <https://koroibos-m.herokuapp.com/api/v1/events/:id/medalists>
 
 The database uses PostgreSQL, and its schema is shown below.
 
-![db_schema](db_schema.png)
+![db_schema](assets/db_schema.png)
 
 ## Tech Stack
 
