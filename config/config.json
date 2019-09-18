@@ -4,23 +4,16 @@
     "password": null,
     "database": "koroibos_development",
     "host": "127.0.0.1",
-    "dialect": "postgres",
-    "operatorsAliases": false
+    "dialect": "postgres"
   },
   "test": {
     "username": "",
     "password": null,
     "database": "koroibos_test",
     "host": "127.0.0.1",
-    "dialect": "postgres",
-    "operatorsAliases": false
+    "dialect": "postgres"
   },
   "production": {
-    "username": "",
-    "password": null,
-    "database": "koroibos_production",
-    "host": "127.0.0.1",
-    "dialect": "postgres",
-    "operatorsAliases": false
+    "use_env_variable": "DATABASE_URL"
   }
 }
