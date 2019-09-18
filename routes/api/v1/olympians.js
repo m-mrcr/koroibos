@@ -8,6 +8,7 @@ const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
 router.get('/', async function(req, res) {
+  res.setHeader(...defaultHeader);
   try {
     if (req.query.age === 'youngest') {
       var age = await Olympian.min('age');
@@ -32,7 +33,6 @@ router.get('/', async function(req, res) {
         return olympianSerializer(olympians)
       })
       .then(serializedOlympians => {
-        res.setHeader(...defaultHeader);
         res.status(200).send({olympians: serializedOlympians})
       })
       .catch(error => {
